@@ -1,0 +1,32 @@
+/*
+ * Page speed: the Lighthouse scores of both runs above the report and the issues below it.
+ * Uses the --wt-* variables of web-tools-core.css; the rings follow Lighthouse's colours by score.
+ */
+
+.ps-scores, .ps-issues { margin-top: 32px; padding: 26px 28px; border: 1px solid var(--wt-line); border-radius: 16px; background: var(--wt-surface); }
+.ps-scores h3, .ps-issues h3 { margin: 0; font-size: 20px; font-weight: 600; }
+.ps-scores + .wt-report { margin-top: 20px; }
+.ps-note { margin: 6px 0 0; font-size: 13px; color: var(--wt-muted); }
+.ps-runs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 18px; }
+.ps-run-name { margin: 0 0 12px; font: 600 13px/1.2 var(--wt-mono); color: var(--wt-text-2); text-transform: uppercase; letter-spacing: .04em; }
+.ps-run ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.ps-score { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-size: 12.5px; line-height: 1.3; color: var(--wt-text-2); }
+.ps-ring { --c: var(--wt-muted); position: relative; display: grid; place-items: center; width: 68px; height: 68px; border-radius: 50%; background: conic-gradient(var(--c) 0 var(--v), var(--wt-line) var(--v) 100%); }
+.ps-ring::before { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--wt-surface); }
+.ps-ring b { position: relative; font-size: 20px; font-weight: 700; color: var(--c); }
+.ps-score.wt-pass .ps-ring { --c: var(--wt-ok); }
+.ps-score.wt-warn .ps-ring { --c: var(--wt-warn); }
+.ps-score.wt-fail .ps-ring { --c: var(--wt-err); }
+.ps-issues { margin-top: 20px; }
+.ps-issues ol { display: grid; gap: 14px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: issue; }
+.ps-issues li { counter-increment: issue; display: grid; gap: 4px; padding: 14px 16px 14px 52px; position: relative; border: 1px solid var(--wt-line); border-radius: 12px; background: var(--wt-bg); }
+.ps-issues li::before { content: counter(issue, decimal-leading-zero); position: absolute; left: 16px; top: 15px; font: 500 13px var(--wt-mono); color: var(--wt-muted); }
+.ps-issue-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+.ps-issue-head b { font-size: 15px; color: var(--wt-text); }
+.ps-saving { display: flex; gap: 10px; font: 600 12.5px var(--wt-mono); color: var(--wt-warn); }
+.ps-issues p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--wt-text-2); }
+
+@media (max-width: 760px) {
+    .ps-scores, .ps-issues { padding: 20px; }
+    .ps-runs { grid-template-columns: 1fr; }
+}

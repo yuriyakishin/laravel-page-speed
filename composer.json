@@ -1,0 +1,43 @@
+{
+    "name": "yu-laravel/page-speed",
+    "description": "Laravel Livewire tool that checks page speed and Core Web Vitals through the Google PageSpeed Insights API.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "pagespeed",
+        "core-web-vitals",
+        "performance"
+    ],
+    "homepage": "https://github.com/yuriyakishin/page-speed",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuriy Akishin",
+            "homepage": "https://yu.net.ua"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "laravel/framework": "^13.0",
+        "livewire/livewire": "^4.0",
+        "yu-laravel/web-tools-core": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yu\\PageSpeed\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Yu\\PageSpeed\\PageSpeedServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
