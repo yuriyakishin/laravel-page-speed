@@ -1,5 +1,5 @@
 {
-    "name": "yu-laravel/laravel-page-speed",
+    "name": "yu-laravel/page-speed",
     "description": "Laravel Livewire tool that checks page speed and Core Web Vitals through the Google PageSpeed Insights API.",
     "type": "library",
     "keywords": [
@@ -22,7 +22,7 @@
         "php": "^8.4",
         "laravel/framework": "^13.0",
         "livewire/livewire": "^4.0",
-        "yu-laravel/laravel-web-tools-core": "^1.0"
+        "yu-laravel/web-tools-core": "^1.0"
     },
     "autoload": {
         "psr-4": {

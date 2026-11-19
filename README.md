@@ -32,10 +32,10 @@ A Livewire tool for Laravel that checks a page's speed and Core Web Vitals throu
 ## Installation
 
 ```bash
-composer require yu-laravel/laravel-page-speed
+composer require yu-laravel/page-speed
 ```
 
-This also installs [`yu-laravel/laravel-web-tools-core`](https://github.com/yuriyakishin/laravel-web-tools-core). Both service providers are discovered automatically.
+This also installs [`yu-laravel/web-tools-core`](https://github.com/yuriyakishin/laravel-web-tools-core). Both service providers are discovered automatically.
 
 Get an API key in Google Cloud Console (APIs & Services → Credentials, with the PageSpeed Insights API enabled) and add it to `.env`:
 
@@ -56,8 +56,8 @@ Put the component on a page whose layout includes `@livewireStyles` and `@livewi
 Import the styles into your CSS build:
 
 ```css
-@import "../../vendor/yu-laravel/laravel-web-tools-core/resources/css/web-tools-core.css";
-@import "../../vendor/yu-laravel/laravel-page-speed/resources/css/page-speed.css";
+@import "../../vendor/yu-laravel/web-tools-core/resources/css/web-tools-core.css";
+@import "../../vendor/yu-laravel/page-speed/resources/css/page-speed.css";
 ```
 
 To match your site's colours and fonts, override the `--wt-*` variables (see [Web Tools Core](https://github.com/yuriyakishin/laravel-web-tools-core#styles)).
