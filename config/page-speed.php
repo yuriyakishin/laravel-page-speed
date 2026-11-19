@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'enabled' => env('PAGE_SPEED_ENABLED', true),
 

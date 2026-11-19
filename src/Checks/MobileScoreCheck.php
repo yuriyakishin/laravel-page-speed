@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yu\PageSpeed\Checks;
 
 use Yu\PageSpeed\Data\Snapshot;
