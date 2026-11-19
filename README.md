@@ -78,6 +78,14 @@ After every check the tool dispatches `Yu\WebToolsCore\Events\ToolCheckedEvent` 
 
 13 translations: cs, de, en, es, fr, it, ja, nl, pl, pt, tr, uk and zh. The language is taken from the visitor's browser, with your app locale as the fallback.
 
+## Author
+
+Yuriy Akishin:
+- 🌐 Website: https://yu.net.ua
+- 📧 Email: yuriy.akishin@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/yuriyakishin/
+- 💻 GitHub: https://github.com/yuriyakishin
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
