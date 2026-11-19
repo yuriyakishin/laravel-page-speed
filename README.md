@@ -8,6 +8,8 @@
 
 A Livewire tool for Laravel that checks a page's speed and Core Web Vitals through the Google PageSpeed Insights API. It runs Lighthouse for a phone and a computer at the same time, turns the scores into a plain-language checklist, and lists the issues that would save the most loading time.
 
+![Page Speed report](images/page-speed.png)
+
 **🔗 Live example: [yu.net.ua/en/tools/page-speed](https://yu.net.ua/en/tools/page-speed)**
 
 ## What it checks
