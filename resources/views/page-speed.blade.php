@@ -33,7 +33,9 @@
     </div>
 
     @if ($report)
-        <div wire:loading.remove wire:target="analyze" aria-live="polite">
+        {{-- A new block for every check (keyed by the count), so each report scrolls the tool up to its form --}}
+        <div wire:key="wt-report-{{ $reportNumber }}" wire:loading.remove wire:target="analyze" aria-live="polite"
+             x-init="$root.scrollIntoView({ behavior: 'smooth', block: 'start' })">
             {{-- Lighthouse scores of both runs: green from 90, amber from 50, red below, as in Lighthouse itself --}}
             @php($tone = fn (?int $score): string => $score === null ? 'skip' : ($score >= 90 ? 'pass' : ($score >= 50 ? 'warn' : 'fail')))
             <section class="ps-scores" aria-labelledby="ps-title">
