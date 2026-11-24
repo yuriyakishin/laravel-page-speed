@@ -74,7 +74,8 @@ One Lighthouse run takes 15–40 seconds, so the API timeout is 75 seconds. Ligh
 
 ## Events
 
-After every check the tool dispatches `Yu\WebToolsCore\Events\ToolCheckedEvent` with `tool = "page-speed"` (see [Listening to checks](https://github.com/yuriyakishin/laravel-web-tools-core#listening-to-checks)).
+- `Yu\PageSpeed\Events\PageSpeedEvent` fires after every finished check: successful, failed or from the cache. It carries `url`, `locale`, `report` (null on failure), `error` and `fromCache`. Listen to it to follow this tool only.
+- `Yu\WebToolsCore\Events\ToolCheckedEvent` fires next to it with `tool = "page-speed"` and the same data, shared by all the web tools (see [Listening to checks](https://github.com/yuriyakishin/laravel-web-tools-core#listening-to-checks)).
 
 ## Languages
 

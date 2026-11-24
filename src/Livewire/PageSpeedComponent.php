@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Yu\PageSpeed\Livewire;
 
 use Illuminate\Contracts\View\View;
+use Yu\PageSpeed\Events\PageSpeedEvent;
 use Yu\PageSpeed\Services\PageSpeedAnalyzer;
 use Yu\WebToolsCore\Livewire\ToolComponent;
 use Yu\WebToolsCore\Locale\LocaleResolver;
@@ -17,6 +18,11 @@ class PageSpeedComponent extends ToolComponent
     protected function name(): string
     {
         return 'page-speed';
+    }
+
+    protected function event(): string
+    {
+        return PageSpeedEvent::class;
     }
 
     protected function locales(): LocaleResolver
